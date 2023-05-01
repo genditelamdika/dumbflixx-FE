@@ -1,6 +1,7 @@
 import Mprops from "./Mprops"
 import { Link } from "react-router-dom";
 import { Col, NavDropdown, Row } from "react-bootstrap";
+import Cards from "./Cards";
 import { useQuery } from "react-query";
 import { API } from '../config/api';
 import Button from 'react-bootstrap/Button';
@@ -83,6 +84,9 @@ function Tvshow(){
     const response = await API.get("/films");
     return response.data.data;
   });
+  const movies = films?.filter((item)=> item.categoryID === 1)
+  const series = films?.filter((item)=> item.categoryID === 2)
+
   console.log(films);
   
     return(
@@ -99,23 +103,25 @@ function Tvshow(){
         </div>
 
         <img className="kontol" src={require( "../image/joker.png")} alt="gambar"></img>
+        <div style={{ background: "black", padding: "20px" }}>
+        <div className="mx-4 gap-5">
+        <p className="fs-6 fw-semibold text-white mt-5">Movies</p>
         <div className="d-flex flex-wrap justify-content-center gap-4">
-         {films?.map((item) => (
-           <div className="flex">
-            <div className="props">
-            <Link to={`/Detail/${item.id}`}><img src={item.thumbnailfilm}/></Link>
-            <h5>
-
-            <Link to={`/Detail/${item.id}`}>{item.title}</Link>
-            </h5>
-            <h5>{item.year}</h5>
-
-            </div>
-
-          </div>
-
-         ))} 
+        {movies?.slice(0, 6).map((data) => {
+              return (
+                // <img src={item.thumbnailfilm}></img>
+                <Cards
+                id={data.id}
+                title={data.title}
+                year={data.year}
+                thumbnailfilm={data.thumbnailfilm}
+                // description={data.description}
+                />
+                );
+            })} 
          </div>
+    </div>
+    </div>
     </div>
     )
 }

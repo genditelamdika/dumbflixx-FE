@@ -50,9 +50,9 @@ function Login() {
 
       // Status check
       if (response.data.data.role === 'admin') {
-        navigate('/Addfilm');
+        navigate('/Film');
       } else {
-        navigate('/Addfilm');
+        navigate('/');
       }
 
       const alert = (

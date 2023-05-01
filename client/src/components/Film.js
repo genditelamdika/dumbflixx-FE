@@ -18,22 +18,6 @@ function Film(props){
   let navigate = useNavigate();
       
         
-    //   }
-    // let { data: films, refetch } = useQuery("filmsCache", async () => {
-    //   const response = await API.get("/films");
-    //   return response.data.data;
-    // });
-
-    // const handleUpdate = (id) => {
-    //   navigate("/Updatefilm/" + id);
-    // };
-    // console.log(films);
-    // const breakpointColumnsObj = {
-    //   default: 6,
-    //   1100: 4,
-    //   700: 3,
-    //   500: 2,
-    // };
     const [categories, setCategories] = useState(null);
     const [selectedValue, setSelectedValue] = useState("TV Series");
     const [deleteid, setDelete] = useState(null);
@@ -95,13 +79,8 @@ function Film(props){
               List Film
             </h2>
             <select value={selectedValue} onChange={handleChange} class=" form-select w-75  bg-dark text-light" aria-label="Default select example">
-              {categories?.map((cat,i) => (
-                
-                
+              {categories?.map((cat,i) => (            
                   <option key={i} value={cat.name}>{cat.name}  {console.log(categories)}</option>
-                 
-                
-                
               ))}
             </select>
           </div>
@@ -187,66 +166,7 @@ function Film(props){
     </>
   );
 };
-    //   <div style={{ background: "black" }}>
-    //   <div className="px-5 py-5">
-    //     <div className="mx-4 gap-5">
-    //       <div className="d-flex flex row-cols-2 mb-3">
-    //         <p className="fs-6 fw-semibold text-white">List Film</p>
-    //         <Link
-    //           to="/Addfilm"
-    //           className="d-flex justify-content-end text-decoration-none">
-    //           <Button variant="danger" size="sm" className="px-4 py-1 fw-bold">
-    //             Add Film
-    //           </Button>
-    //         </Link>
-    //       </div>
-    //       <div className="d-flex flex-wrap justify-content-center gap-4">
-    //         {film?.map((item) => {
-    //           return (
-    //             <Cards
-    //               id={item.id}
-    //               title={item.title}
-    //               year={item.year}
-    //               thumbnailfilm={item.thumbnailfilm}
-    //             />
-    //             );
-    //           })}
-    //           //   <div className="d-flex flex-wrap justify-content-center gap-4">
-    //       {films?.map((item) => (
-    //        <div className="flex">
-    //         <div className="props">
-    //         <Link to={`/Detail/${item.id}`}><img src={item.thumbnailfilm}/></Link>
-    //         <h5>
-
-    //         <Link to={`/Detail/${item.id}`}>{item.title}</Link>
-    //         </h5>
-    //         <h5>{item.year}</h5>
-    //         <h5>{item.description}</h5>
-            
-    //                     <Button
-    //                       onClick={() => {
-    //                         handleUpdate(item.id);
-    //                       }}
-    //                       className="btn-sm btn-success me-2"
-    //                       style={{ width: "135px" }}
-    //                     >
-    //                       Edit
-    //                     </Button>
-
-    //         </div>
-
-    //       </div>
-
-    //      ))} 
-    //           </div>
-    //           </div>
-    //           </div>
-    //           </div>
-    //           </div>
-
-
-    // )
-    //           }
+    
         
 export default Film;
 

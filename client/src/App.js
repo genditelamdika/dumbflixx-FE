@@ -80,7 +80,8 @@ function App() {
   
   return (
     <div>
-      {/* {isLoading ? null : */}
+      {isLoading ? null : (
+        <>
 
       <Navbars/>
       <Routes>
@@ -110,7 +111,8 @@ function App() {
         <Route path="/Login" element={<Login />} />
        
       </Routes>
-    
+        </>
+)  }
     </div>
   )
 }

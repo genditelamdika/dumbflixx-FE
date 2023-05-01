@@ -20,12 +20,7 @@ function Header() {
   const [state, dispatch] = useContext(UserContext);
   const [claims, setClaims] = useState({});
   const [handleDropdown, setHandleDropdown] = useState(false);
-  // const [user, setUser] = useContext(UserContext)
-  // const [dropdown, setDropdown] = useContext(DropdownContext)
-  // const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('loggedIn') || false);
-  // const [isAdmin, setIsAdmin] = useState(
-  //   localStorage.getItem("isAdmin") || false
-  // );
+ 
 
   let navigate = useNavigate();
 
@@ -229,6 +224,3 @@ console.log("sate",state)
   );
 }
 export default Header;
-
-
-// {`/Transaction/${claims.id}`}

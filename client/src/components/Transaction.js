@@ -34,7 +34,7 @@ function Transaction() {
             </tr>
           </thead>
           <tbody>
-          {transaction?.slice(0, 6).map((data) => {
+          {transaction?.slice(0, 10).map((data) => {
               return (
                 <tr style={{ background: "#2B2B2B" }}>
                   {/* <td style={{height:"70px"}} className="text-white">{item.id}</td> */}

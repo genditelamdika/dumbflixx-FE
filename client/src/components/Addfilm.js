@@ -13,11 +13,8 @@ import { Error, Success } from "../helpers/Toast";
 
 function AddFilm() {
   const [categories, setCategories] = useState([]) //Store all category data
-
-  // const navigate = useNavigate()
-  
-  // navigate("/AddFilm")
-
+  let navigate = useNavigate();
+ 
   // data yang akan dikirimkan ke backend
   const [form, setForm] = useState({
     title: '',
@@ -74,7 +71,7 @@ function AddFilm() {
        // Insert product data
        const response = await API.post('/film', formData, config)
        console.log("add product success : ", response)
-       // navigate('/')
+       navigate('/Film')
      } catch (error) {
        console.log("add product failed : ", error)
        console.log(form)
@@ -91,47 +88,7 @@ function AddFilm() {
      fileInputRefAttach.current.click()
    }
 
-  //  const [dataEpisode, setDataEpisode] = useState({
-  //   title_episode: "",
-  //   image: "",
-  //   linkfilm: "",
-  // });
-
-  // const [episodePlus, setEpisodePlus] = useState([
-  //   {
-  //     title_episode: "",
-  //     image: "",
-  //     linkfilm: "",
-  //   },
-  // ]);
-
-  // function handlePlusEpisode(e) {
-  //   e.preventDefault();
-  //   Success({ message: "Succes" });
-  //   setEpisodePlus([
-  //     ...episodePlus,
-  //     {
-  //       title: "Title",
-  //       linkFilm: "Link Film",
-  //     },
-  //   ]);
-  // }
-
-  // function handleChangeEpisode(e) {
-  //   // const episodeData = dataEpisode?.map((item, i) => {
-  //   //   if (i === index) {
-  //   //     return [{ ...item }, { [e.target.name]: e.target.value }]
-  //   //   }
-  //   // })
-  //   console.log("punya episode", e.target.name);
-  //   setDataEpisode({
-  //     ...dataEpisode,
-  //     [e.target.name]:
-  //       e.target.type === "file" ? e.target.files[0] : e.target.value,
-  //   });
-  // }
-
-
+ 
 
 
 
