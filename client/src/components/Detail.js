@@ -135,7 +135,9 @@ function Detail() {
                   <ReactPlayer
                     url={item?.linkfilm}
                     light={item?.thumbnailepisode}
+
                   />
+                  <h1 style={{height:"10 px"}}>{item?.titleepisode}</h1>
                       <button onClick={handleDelete} type="buton" className="shadow  btn btn-danger fw-bold  " style={{width:"70px"}} name={item.id} value={item.id}>
                         Delete
                       </button >

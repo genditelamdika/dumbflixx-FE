@@ -79,12 +79,12 @@ function Profile() {
               <img src={require( "../image/Vector3.png")} className="me-3" style={{height:"40px"}}></img>
                 <span style={{ marginTop: "-3px" }}>
                   <p className="text-white" style={{ fontSize: "14px" }}>
-                  {profileData.subcribe}
+                  {profileData.gender}
                   </p>
                   <p
                     className="text-muted"
                     style={{ marginTop: "-15px", fontSize: "12px" }}>
-                      Active
+                      Gender
                   </p>
                 </span>
               </div>
@@ -93,18 +93,18 @@ function Profile() {
               <img src={require( "../image/Vector4.png")} className="me-3" style={{height:"40px"}}></img>
                 <span style={{ marginTop: "-3px" }}>
                   <p className="text-white" style={{ fontSize: "14px" }}>
-                  {profileData.gender}
+                  Active
                   </p>
                   <p
                     className="text-muted"
                     style={{ marginTop: "-15px", fontSize: "12px" }}>
-                    Gender
+                    Active
                   </p>
                 </span>
               </div>
   
               <div className="d-flex mb-3">
-              <img src={require( "../image/Vector5.png")} className="me-3" style={{height:"40px"}}></img>
+              <img src={require( "../image/Vector4.png")} className="me-3" style={{height:"40px"}}></img>
                 <span style={{ marginTop: "-3px" }}>
                   <p className="text-white" style={{ fontSize: "14px" }}>
                   {profileData.phone}
