@@ -202,13 +202,14 @@ console.log("sate",state)
           </Dropdown>
         ) : (
           <>
-            <div className="right-side">
+            <div style={{position:"absolute",marginRight:"110px"}} className="">
               <Register
                 register={register}
                 closeRegister={closeRegister}
                 openLogin={openLogin}
               />
-
+              </div>
+              <div style={{position:"absolute",marginRight:"30px"}}>
               <Login
                 // className="py-"
                 login={login}
